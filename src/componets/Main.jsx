@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   postText: {
     fontSize: "1rem",
-    fontFamily: "Roboto",
+    fontFamily: "Arial",
     fontWeight: 400,
     lineHeight: 1.5,
     letterSpacing: "0.00938em",
@@ -42,6 +42,7 @@ export default function Main(props) {
         <div className={classes.post}>
           <h3 className={classes.postTitle}>{post.title}</h3>
           <p className={classes.postText}>{post.text}</p>
+          <p className={classes.postText}>{post.secondPar}</p>
         </div>
       ))}
     </Grid>

@@ -6,8 +6,11 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
+        <Route path="/" exact>
+          <Blog />
+        </Route>
         <Route path="/people">
-          <Blog type="people" />
+          <Blog type="people" title="Космонавт" />
         </Route>
         <Route path="/yesterday">
           <Blog type="yesterday" />

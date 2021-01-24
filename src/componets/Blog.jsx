@@ -10,8 +10,10 @@ import Main from "./Main";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import sections from "../posts/sections";
+import postsHook from "../posts/posts";
 import sidebarHook from "../posts/sidebar";
 import mainPostHook from "../posts/mainFeaturedPost";
+import featuredPostsHook from "../posts/featuredPosts";
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
@@ -19,33 +21,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const featuredPosts = [
-  {
-    title: "Название",
-    date: "Nov 12",
-    description: "Какой-то текст пока не знаю.",
-    image: "https://source.unsplash.com/random/?Galaxy,stars,blackHole",
-    imageText: "Image Text",
-  },
-  {
-    title: "Название",
-    date: "Nov 11",
-    description: "Какой-то текст пока не знаю.",
-    image: "https://source.unsplash.com/random/?Galaxy,stars,blackHole",
-    imageText: "Image Text",
-  },
-];
-
-const posts = [
-  { title: "Ракета", text: "asd" },
-  { title: "Ракета", text: "asd" },
-  { title: "Ракета", text: "asd" },
-];
-
 export default function Blog(props) {
   const classes = useStyles();
+
+  //Текст в зависимости от type
   const sidebar = sidebarHook(props.type);
   const mainFeaturedPost = mainPostHook(props.type);
+  const posts = postsHook(props.type);
+  const featuredPosts = featuredPostsHook(props.type);
 
   return (
     <React.Fragment>
@@ -60,7 +43,7 @@ export default function Blog(props) {
             ))}
           </Grid>
           <Grid container spacing={5} className={classes.mainGrid}>
-            <Main title="Заголовок" posts={posts} />
+            <Main title={props.title} posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
