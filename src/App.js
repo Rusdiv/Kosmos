@@ -13,16 +13,16 @@ function App() {
           <Blog type="people" title="Космонавт" />
         </Route>
         <Route path="/yesterday">
-          <Blog type="yesterday" />
+          <Blog type="yesterday" title="Прошлое" />
         </Route>
         <Route path="/today">
-          <Blog type="today" />
+          <Blog type="today" title="Настоящее " />
         </Route>
         <Route path="/nextday">
-          <Blog type="nextday" />
+          <Blog type="nextday" title="Будущее" />
         </Route>
         <Route path="/planets">
-          <Blog type="planets" />
+          <Blog type="planets" title="Планеты" />
         </Route>
       </Switch>
     </BrowserRouter>
