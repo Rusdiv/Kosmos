@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
+import CustomizedDialogs from "./Dialog";
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -37,6 +38,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MainFeaturedPost(props) {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   const { post } = props;
 
   return (
@@ -67,10 +76,17 @@ export default function MainFeaturedPost(props) {
             <Typography variant="h5" color="inherit" paragraph>
               {post.description}
             </Typography>
-            <Link variant="subtitle1" href="#">
+            <Link variant="subtitle1" onClick={handleClickOpen}>
               {post.linkText}
             </Link>
           </div>
+          <CustomizedDialogs
+            handleClose={handleClose}
+            handleClickOpen={handleClickOpen}
+            open={open}
+            title={post.title}
+            description={post.fullDescription}
+          />
         </Grid>
       </Grid>
     </Paper>

@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 
+
 const useStyles = makeStyles((theme) => ({
   post: {
     ...theme.typography.body2,
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Main(props) {
+
   const classes = useStyles();
   const { posts, title } = props;
 
@@ -45,6 +47,7 @@ export default function Main(props) {
           <p className={classes.postText}>{post.secondPar}</p>
         </div>
       ))}
+
     </Grid>
   );
 }
