@@ -13,7 +13,7 @@ const sidebar = {
   ],
   social: [
     { name: "GitHub", icon: GitHubIcon , url: 'https://github.com/Rusdiv'},
-    { name: "Telegram", icon: TelegramIcon, url: 'https://github.com/Rusdiv'},
+    { name: "Telegram", icon: TelegramIcon, text: '@Kiren79'},
   ],
 };
 
