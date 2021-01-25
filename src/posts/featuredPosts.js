@@ -1,13 +1,4 @@
-let featuredPosts = [
-  {
-    title: "",
-    date: "",
-    description: "",
-    fullDescription: ``,
-    image: "",
-    imageText: "",
-  },
-];
+let featuredPosts = [];
 
 export default function featuredPostsHook(props) {
   if (props === "people") {
@@ -109,6 +100,9 @@ export default function featuredPostsHook(props) {
         imageText: "Нептун",
       },
     ];
+    if (props === "yesterday") {
+      featuredPosts = [];
+    }
   }
   return featuredPosts;
 }
