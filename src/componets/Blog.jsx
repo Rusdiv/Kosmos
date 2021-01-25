@@ -54,8 +54,8 @@ export default function Blog(props) {
         </main>
       </Container>
       <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
+        title="Космос"
+        description="Сайт сделан учеником 10А класса , гимназии №22"
       />
     </React.Fragment>
   );
