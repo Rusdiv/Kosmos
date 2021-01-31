@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
@@ -14,7 +14,6 @@ import usePosts from "../posts/posts";
 import useSidebar from "../posts/sidebar";
 import useMainPost from "../posts/mainFeaturedPost";
 import useFeaturedPosts from "../posts/featuredPosts";
-import Preloader from "./Preloader";
 
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
