@@ -32,7 +32,13 @@ export default function Header(props) {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Button size="small">Подписаться</Button>
+        <Button
+          size="small"
+          target="_blank"
+          href="https://github.com/Rusdiv/Kosmos"
+        >
+          GitHub
+        </Button>
         <Typography
           component="h2"
           variant="h5"
@@ -46,9 +52,6 @@ export default function Header(props) {
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <Button variant="outlined" size="small">
-          Войти
-        </Button>
       </Toolbar>
       <Toolbar
         component="nav"

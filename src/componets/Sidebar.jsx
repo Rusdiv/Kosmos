@@ -37,6 +37,7 @@ export default function Sidebar(props) {
           variant="body1"
           href={archive.url}
           key={archive.title}
+          target="_blank"
         >
           {archive.title}
         </Link>
@@ -45,7 +46,13 @@ export default function Sidebar(props) {
         Соц. сети
       </Typography>
       {social.map((network) => (
-        <Link display="block" variant="body1" href={network.url} key={network}>
+        <Link
+          target="_blank"
+          display="block"
+          variant="body1"
+          href={network.url}
+          key={network}
+        >
           <Grid container direction="row" spacing={1} alignItems="center">
             <Grid item>
               <network.icon />

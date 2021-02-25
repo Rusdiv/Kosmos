@@ -1,5 +1,5 @@
 import GitHubIcon from "@material-ui/icons/GitHub";
-import TelegramIcon from '@material-ui/icons/Telegram';
+import TelegramIcon from "@material-ui/icons/Telegram";
 
 const sidebar = {
   title: "Описание",
@@ -12,8 +12,8 @@ const sidebar = {
     { title: "Планеты", url: "planets" },
   ],
   social: [
-    { name: "GitHub", icon: GitHubIcon , url: 'https://github.com/Rusdiv'},
-    { name: "Telegram", icon: TelegramIcon, text: '@Kiren79'},
+    { name: "GitHub", icon: GitHubIcon, url: "https://github.com/Rusdiv" },
+    { name: "Telegram", icon: TelegramIcon, text: "@Kiren79" },
   ],
 };
 
@@ -35,6 +35,11 @@ const sidebarHook = (props) => {
   }
   if (props === "today") {
     sidebar.title = "Космическое пространство";
+    sidebar.description =
+      "относительно пустые участки Вселенной, которые лежат вне границ атмосфер небесных тел. Космос не является абсолютно пустым пространством: в нём есть, хотя и с очень низкой плотностью, межзвёздное вещество (преимущественно молекулы водорода), кислород в малых количествах (остаток после взрыва звезды), космические лучи и электромагнитное излучение, а также гипотетическая тёмная материя.";
+  }
+  if (props === "nextday") {
+    sidebar.title = "Столетний космический корабль";
     sidebar.description =
       "относительно пустые участки Вселенной, которые лежат вне границ атмосфер небесных тел. Космос не является абсолютно пустым пространством: в нём есть, хотя и с очень низкой плотностью, межзвёздное вещество (преимущественно молекулы водорода), кислород в малых количествах (остаток после взрыва звезды), космические лучи и электромагнитное излучение, а также гипотетическая тёмная материя.";
   }
